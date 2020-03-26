@@ -1,3 +1,4 @@
+  공배수 판별
   import java.util.*;
   class Main {
     public static void main(String[] args) {
@@ -13,5 +14,117 @@
     }
 }
 
+윤년 구하기 
+  import java.util.*;
+  class Main {
+    public static void main(String[] args) {
+      Scanner scan = new Scanner(System.in);
+      int year;
 
+      if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)){
+        System.out.println("1");
+      }
+      else {
+       System.out.println("0");   
+      }
+    }
+}
+
+Day 4
+피보나치수열
+
+n = int(input())
+
+fibo = [0, 1, 1]
+
+for i in range(3, n+1):
+  fibo += [fibo[i-2] + fibo[i-1]]
+  
+print(fibo[n])
+
+문제 2
+def fibo(n):
+  if n <=2:
+    return 1
+  
+  return fibo(n-2) + fibo(n-1)
+  
+n = int(input())
+
+print(fibo)
+
+문제 3
+
+def fibo(n):
+  if n == 1:
+    return 1
+  elif n == 2:
+    return 3
+  elif n == 3:
+    return 5
+    
+  return fibo(n-3) + fibo(n-2) + fibo(n-1)
+  
+  람다 식 
+  from math import pi
+
+area_circle = lambda radius :
+radius ** 2 * pi
+
+print(area_circle(5))
+
+튜플(tuple) 자료형 
+t = (1,2,3,4)
+t2 = (5,6,7,8)
+
+print(t + t2)
+print(t*3)
+print(len(t))
+
+for i in range(0, len(t)):
+    print(t[i])
+
+딕셔너리(dictionary)
+dic = {'name' : 'parkchangjun','birth' : '020219' ,
+       'phone' : '01025689750' , 'gender' : 'male'}
+
+print("My name is " + dic['name'])
+print(dic.keys())
+
+for key in dic.keys():
+    print("key=",key,", value=",dic[key])
+
+print(dic,items())
+
+print('name' in dic) 
+
+dic.clear()  #지우고싶을때
+print(dic.items())
+
+s1 = set([1,2,3,4,5]) #중복을 허용x, 자동으로 오름차순으로 정리
+s2 = set([4,5,6,7,8])
+
+#교집합
+print(s1&s2)
+s1.intersection(s2)
+
+#합집합
+print(s1 | s2)
+s1.union(s2)
+
+#차집합
+print( s1 - s2)
+s1.difference(s2)
+
+#한개의 값만 추가하고싶을때 
+s1.add(9)
+print(s1)
+
+#여러 개의 값을 추가 하고 싶을ㄸㅐ
+s1.update([10,11,12])
+print(s1)
+
+#특정 key 값을 제거 하고싶을 때
+s1.remove(2)
+print(s1)
 
