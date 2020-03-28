@@ -1,0 +1,313 @@
+class Main {
+  public static void main(String[] args) {
+  
+    //Case 1. println 메소드
+    System.out.println("Hello World");
+
+    //Case 2. print + println 메소
+    System.out.println("Hello");
+    System.out.println("World");
+    
+    //예외 케이스
+    System.out.println("'Hello world'");
+    System.out.println("\"Hello World\"");
+    System.out.println("//Hello World\\");
+    System.out.println("%Hello World%");
+  }
+}
+
+// 변수의 선언 
+    //{접근제어자} {static} <자료형> 변수이름 {=값};
+
+    //접근제어자
+    //private : 자기 클래스 안에서만 접근이 가능한
+    //protect 
+    //degault
+    //public : 어디서든 접근이 가능한
+    
+    //자료형
+    //<정수>
+    //short
+    //int
+    //long
+    //long long int
+
+    //<실수>
+    //float
+    //float f = 3.14f
+    //double
+
+    //<문자>
+    //cahr
+
+    //<기타>
+    //byte
+    //boolean
+    
+    import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner scan = new Scanner(System.in);
+    int n;
+    float f;
+
+    n = scan.nextInt();
+    f = scan.nextFloat();
+
+    System.out.println("input n = "+ String.valueOf(n));
+    System.out.println("input f = "+ String.valueOf(f));
+  }
+}
+
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner scan = new Scanner(System.in);
+    int n,m;
+
+    n = scan.nextInt();
+    m = scan.nextInt();
+    
+    //산술 연산자
+    System.out.println(String.valueOf(n) + "+" + String.valueOf(m)+ "=" + String.valueOf(n+m));
+    System.out.println(String.valueOf(n) + "-" + String.valueOf(m)+ "=" + String.valueOf(n-m));
+    System.out.println(String.valueOf(n) + "*" + String.valueOf(m)+ "=" + String.valueOf(n*m));
+    System.out.println(String.valueOf(n) + "/" + String.valueOf(m)+ "=" + String.valueOf(n/m));
+    System.out.println(String.valueOf(n) + "%" + String.valueOf(m)+ "=" + String.valueOf(n%m));
+    
+    //부등식
+    System.out.println(String.valueOf(n) + ">" + String.valueOf(m)+ "=" + 
+    String.valueOf(n>m));
+    System.out.println(String.valueOf(n) + ">=" + String.valueOf(m)+ "=" + 
+    String.valueOf(n>=m));
+    System.out.println(String.valueOf(n) + "<" + String.valueOf(m)+ "=" + 
+    String.valueOf(n<m));
+    System.out.println(String.valueOf(n) + "<=" + String.valueOf(m)+ "=" + 
+    String.valueOf(n<=m));
+    System.out.println(String.valueOf(n) + "==" + String.valueOf(m)+ "=" + 
+    String.valueOf(n==m));
+    System.out.println(String.valueOf(n) + "!=" + String.valueOf(m)+ "=" + 
+    String.valueOf(n!=m));
+
+    //논리 연산자 
+    //(논리식) && (논리식) : 그리고 (and)
+    //(논리식) || (논리식) : 또는 (or)
+    //!(논리식) : 아니다 (not)
+
+  }
+}
+
+//조건문(if)
+    // if(논리식){
+    // ...
+    // }else if (논리식){
+    // ...
+    // }...
+    // else {
+    // ...
+    //}
+    
+    
+   <<if 문>>
+    import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner scan = new Scanner(System.in);
+    int n;
+
+    n = scan.nextInt();
+
+    if (n % 2 == 0 && n % 3 ==0){
+      System.out.println("2와3의 공배수"); 
+    }else if(n % 2 == 0){
+      System.out.println("2의 배수");
+    }else if(n % 3 == 0){
+      System.out.println("3의 배수");
+    }else{
+      System.out.println("other");
+
+      if(n % 6 == 0){
+        System.out.println("6의 배수");
+      }
+    }
+  }
+}
+
+<<switch>>
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner scan = new Scanner(System.in);
+    int n;
+
+    n = scan.nextInt();
+
+    switch(n){
+      case 1 :
+        System.out.println("n은 1입니다");
+        break;
+      case 2 :
+        System.out.println("n은 2입니다");
+        break;
+      case 3 :
+        System.out.println("n은 3입니다");
+        break;
+      case 4 :
+        System.out.println("n은 4입니다");
+        break;
+      case 5 :
+        System.out.println("n은 5입니다");
+        break;
+      default :
+        System.out.println("n은 1~5까지의 수가 아닙니다");
+    }
+  }
+}
+
+<<while>>
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+
+    Scanner scanner = new Scanner(System.in);
+
+    int n,i=1,sumVal = 0;
+
+    n = scan.nextInt();
+
+    while(i<=n){
+      sumVal <= i;
+      i++;
+    }
+      System.out.println("1~"+ String.valueOf(n) + "까지의 합 = "+ String.valueOf(sumVal));
+    
+  }
+}
+import java.util.Scanner;
+
+class Main {
+
+  public static int sumMethod(int n){
+      int i, sumVal = 0;
+      for(i=1;i<=n;++i){
+        sumVal += i;
+      }
+      return sumVal;
+    }
+
+  public static void main(String[] args) {
+
+    Scanner scan = new Scanner(System.in);
+
+    int n;
+
+    n = scan.nextInt();
+
+    System.out.println(String.valueOf(sumMethod(n)));
+    
+  }
+}
+
+<메소드>
+import java.util.Scanner;
+
+class Main {
+
+  public static int sumMethod(int n){
+      int i, sumVal = 0;
+      for(i=1;i<=n;++i){
+        sumVal += i;
+      }
+      return sumVal;
+    }
+    public static int recursiveSumMethod(int n){
+      if(n==1){ return 1; }
+      return recursiveSumMethod(n-1) + n;
+    }
+  public static void main(String[] args) {
+
+    Scanner scan = new Scanner(System.in);
+
+    int n;
+
+    n = scan.nextInt();
+
+    System.out.println(String.valueOf(sumMethod(n)));
+    
+  }
+}
+
+[  
+Main.java 
+
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+   House mHouse = new House(10,5,"ChangJunHouse");
+
+  
+   System.out.println(String.valueOf(mHouse.getWidth())); 
+
+   mHouse.mWalkMethod();
+
+   mHouse.mOnOffLight();
+   mHouse.mOnOffLight();
+
+   mHouse.mDropWater();
+  }
+}
+House.java
+public class House{
+  private int mWidth,mHeight;
+  private boolean mLightStatus;
+  private String mHouseName;
+  //생성자 메소드
+  public House(int width, int height, String name){
+    this(width,height, name, false);
+  }
+  //생성자 메소드
+  public House(int width, int height, String name ,boolean lightStatus){
+    this.mWidth = width;
+    this.mHeight = height;
+    this.mHouseName = name;
+    this.mLightStatus = lightStatus;
+  }
+  //getter
+  public int getWidth(){
+    return this.mWidth;
+  }
+
+  //setter
+  public void setWidth(int width){
+    this.mWidth = width;
+  }
+   
+  public void mWalkMethod(){
+    System.out.println("뚜벅 뚜벅"); 
+  }
+
+  public void mOnOffLight(){
+    if(this.mLightStatus == true){
+      System.out.println("불을 끕니다.");
+      this.mLightStatus = false;
+    }else if(this.mLightStatus == false){
+      System.out.println("불을 켭니다.");
+      this.mLightStatus = true;
+    }
+  }
+
+  public void mDropWater(){
+    System.out.println("물을 내립니다.");
+  }
+}
+]
