@@ -1,0 +1,304 @@
+원의 넓이 구하는법
+def calculate_area(radius):
+    area=3.14*radius**2
+    return area
+c_area = calculate_area(5.0)
+print(c_area)
+
+거북이 사각형 그리기
+import turtle
+t=turtle.Turtle()
+t.shape('turtle')
+
+다른방법
+def calculate_area(radius):
+    result=3.14*r**2
+    return result
+
+r=float(input("원의 반지름:"))
+area=calculate_area(r)
+print(area)
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+거북이가 사각형 그리기
+def square(length):
+    for i in range(4):
+        t.forward(length)
+        t.left(90)
+
+t.up()
+t.goto(-200,0)
+t.down()
+square(100);
+t.up()
+t.goto(0,0)
+t.down()
+square(100);
+t.up()
+t.goto(200,0)
+t.down()
+square(100);
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+거북이가 n각형을 i번 그리기
+import turtle
+t=turtle.Turtle()
+t.shape('turtle')
+
+def n_polygon(n,length):
+    for i in range(n):
+        t.forward(length)
+        t.left(360//n)
+
+for i in range(40):
+    t.left(10)
+    n_polygon(8,50)
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+문장 대입하는법
+def greet(name,msg=' 별일 없죠?'):
+    print('안녕',name+','+msg)
+
+greet('춘자')
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+클릭했을때 거북이가 사각형그리기
+import turtle
+t=turtle.Turtle()
+t.shape('turtle')
+
+def square(length):
+    for i in range(4):
+        t.forward(length)
+        t.left(90)
+
+def drawit(x,y):
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    t.begin_fill()
+    t.color("green")
+    square(50)
+    t.end_fill()
+
+s=turtle.Screen()
+s.onscreenclick(drawit)
+
+선그리기
+import turtle
+t=turtle.Turtle()
+t.shape('turtle')
+
+def draw(x,y):
+    t.goto(x,y)
+
+t=turtle.Turtle()
+t.shape('turtle')
+t.pensize(20)
+
+s=turtle.Screen()
+s.onscreenclick(draw)
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+나무 그리기
+
+import turtle
+t=turtle.Turtle()
+t.shape('turtle')
+
+def tree(length):
+    if length>5:
+        t.forward(length)
+        t.right(20)
+        tree(length-15)
+        t.left(40)
+        tree(length-15)
+        t.right(20)
+        t.backward(length)
+
+t=turtle.Turtle()
+t.left(90)
+t.color("green")
+t.speed(5)
+tree(90)
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+그래프 그리기
+import turtle
+t=turtle.Turtle()
+
+def drawBar(height):
+    t.begin_fill()
+    t.left(90)
+    t.forward(height)
+    t.write(str(height),font=("Time New Roman",16,'bold'))
+    t.right(90)
+    
+    t.forward(40)
+    t.right(90)
+    t.forward(height)
+    t.left(90)
+    t.end_fill()
+data=[120,56,309,220,156,23,98]
+t=turtle.Turtle()
+t.color("green")
+t.fillcolor("red")
+t.pensize(3)
+for d in data:
+    drawBar(d)
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+미로탈출
+import random
+import turtle
+
+def draw_maze(x,y):
+        for i in range(2):
+            t.penup()
+            if i==1:
+                t.goto(x+100,y+100)
+            else:
+                t.goto(x,y)
+            t.pendown()
+            t.forward(300)
+            t.right(90)
+            t.forward(300)
+            t.left(90)
+            t.forward(300)
+
+def turn_left():
+    t.left(10)
+    t.forward(10)
+
+def turn_right():
+    t.right(10)
+    t.forward(10)
+
+t=turtle.Turtle()
+screen=turtle.Screen()
+t.shape("turtle")
+t.speed(0)
+
+draw_maze(-300,200)
+screen.onkey(turn_left,"Left")
+screen.onkey(turn_right,"Right")
+
+t.penup();
+t.goto(-300,250)
+t.speed(1)
+t.pendown();
+screen.listen()
+screen.mainloop()
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+거북이 경주
+
+import turtle
+import random
+
+
+t1=turtle.Turtle()
+t2=turtle.Turtle()
+t3=turtle.Turtle()
+
+t1.color("pink")
+t1.shape("turtle")
+t1.shapesize(3)
+t1.pensize(3)
+t1.speed(1)
+
+t2.color("green")
+t2.shape("turtle")
+t2.shapesize(3)
+t2.pensize(3)
+t2.speed(1)
+
+t3.color("red")
+t3.shape("turtle")
+t3.shapesize(3)
+t3.pensize(3)
+t3.speed(1)
+
+t1.penup()
+t1.goto(-300,0)
+
+t2.penup()
+t2.goto(-300,100)
+
+t3.penup()
+t3.goto(-300,50)
+
+for i in range(100):
+    d1=random.randint(1,60)
+    t1.forward(d1)
+    d2=random.randint(1,60)
+    t2.forward(d2)
+    d3=random.randint(1,60)
+    t3.forward(d3)
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+태극기
+
+def draw_shape(radius,color1):
+    t.left(250)
+    t.width(3)
+    t.color("black",color1)
+    t.begin_fill()
+    t.circle(radius/2.0,-180)
+    t.circle(radius,180)
+    t.left(180)
+    t.circle(-radius/2.0,-180)
+    t.end_fill()
+
+import turtle
+t=turtle.Turtle()
+t.reset()
+draw_shape(200,"red")
+t.setheading(180)
+draw_shape(200,"blue")
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+앵그리터틀
+import turtle
+import math
+
+player=turtle.Turtle()
+player.shape("turtle")
+screen=player.getscreen()
+
+def turnleft():
+    player.left(5)
+def turnright():
+    player.left(5)
+def fire():
+    x=0
+    y=0
+    velocity=50
+    angle=player.heading()
+    vx=velocity+math.cos(angle*3.14/180.0)
+    vy=velocity+math.cos(angle*3.14/180.0)
+    while player.ycor()>=0:
+        vx=vx
+        vy=vy-10
+        x=x+vx
+        y=y+vy
+        player.goto(x,y)
+
+screen.onkeypress(turnleft,"Left")
+screen.onkeypress(turnleft,"Right")
+screen.onkeypress(fire,"space")
+screen.listen()
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
