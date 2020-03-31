@@ -1,0 +1,145 @@
+올림픽
+
+import turtle
+
+def draw_olympic_symbol():
+    positions=[[0,0,"blue"],[-120,0,"purple"],[60,60,"red"],
+               [-60,60,"yellow"],[-180,60,"green"]]
+    for x,y,c in positions:
+        t.penup()
+        t.goto(x,y)
+        t.pendown()
+        t.color(c,c)
+        t.begin_fill()
+        t.circle(30)
+        t.end_fill()
+t=turtle.Turtle()
+draw_olympic_symbol()
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+딕셔너리
+
+engilsh_dict=dict()
+
+engilsh_dict['one']='하나'
+engilsh_dict['two']='둘'
+engilsh_dict['three']='셋'
+
+word=input('단어를 입력하시오:')
+print(engilsh_dict[word])
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+그림판
+
+from tkinter import*
+
+def paint(event):
+    x1,y1=(event.x-1),(event.y+1)
+    x2,y2=(event.x-1),(event.y+1)
+    canvas.create_oval(x1,y1,x2,y2,fill="black")
+
+window=Tk()
+canvas=Canvas(window)
+canvas.pack()
+canvas.bind("<B1-Motion>",paint)
+window.mainloop()
+    
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+거북이 원그리기
+
+from turtle import*
+
+t1=Turtle()
+t1.shape("circle")
+
+t2=Turtle()
+t2.shape("turtle")
+
+t3=Turtle()
+t3.shape("square")
+
+t1.penup()
+t2.penup()
+t1.goto(0,100)
+t2.goto(0,50)
+t1.pendown()
+t2.pendown()
+
+while True:
+    t1.circle(100)
+    t2.circle(150)
+    t3.circle(200)
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+거북이 색 바꾸기
+
+from turtle import*
+
+class MyTurtle(Turtle):
+    def glow(self,x,y):
+        self.fillcolor("red")
+
+turtle=MyTurtle()
+turtle.shape("turtle")
+turtle.onclick(turtle.glow)
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+공 튕기기
+
+from tkinter import*
+import time
+import random
+
+class Ball:
+    def __init__(self, canvas, color, size, x, y, xspeed, yspeed):
+
+        self.canvas=canvas
+        self.color=color
+        self.size=size
+        self.x=x
+        self.y=y
+
+        self.xspeed=xspeed
+        self.yspeed=yspeed
+        self.id=canvas.create_oval(x, y, x+size, y+size, fill=color)
+
+
+    def move(self):
+        self.canvas.move(self.id,self.xspeed, self.yspeed)
+        (x1,y1,x2,y2) = self.canvas.coords(self.id)
+        (self.x,self.y) = (x1,y1)
+        if x1 <= 0 or x2>=WIDTH:
+            self.xspeed=-self.xspeed
+        if y1 <= 0 or y2>=HEIGHT:
+            self.yspeed=-self.yspeed
+WIDTH=800
+HEIGHT=400
+
+window=Tk()
+canvas=Canvas(window, width=WIDTH, height=HEIGHT)
+canvas.pack()
+
+color_list=["yellow","green","red","blue","orange","pink","grey","black"]
+balls_list=[]
+
+for i in range(10):
+    color=random.choice(color_list)
+    size=random.randrange(10,100)
+    xspeed=random.randrange(1,10)
+    yspeed=random.randrange(1,10)
+    balls_list.append(Ball(canvas,color,size,0,0,xspeed,yspeed))
+
+while True:
+    for ball in balls_list:
+        ball.move()
+    window.update()
+    time.sleep(0.03)
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
