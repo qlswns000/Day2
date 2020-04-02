@@ -82,3 +82,502 @@
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	학과:컴퓨터 정보과<br>
+	반명:A반<br>
+	학번:20911001<br>
+	이름:홍길동
+</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+글자 색 바꾸는법
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body text="blue">
+	바탕글자는 파란색임<br>
+	나의 홈페이지에 오신 걸 환영합니다.
+</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+웹문서
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body link="red" vlink="green" alink="yellow">
+	나의 홈페이지에 오신걸 환영 합니다.<br><br>
+	<a href=a.html>웹문서1</a><br><br>
+	<a href=b.html>웹문서2</a><br><br>
+	<a href=c.html>웹문서3</a><br><br>
+</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<hn>태그
+(<hn>n=1~6,자동으로 줄바꿈)
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	위 문자열
+	<h1>나의 홈페이지</h1>
+	<h2>나의 홈페이지</h2>
+	<h3>나의 홈페이지</h3>
+	아래 문자열
+</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<font>태그
+size,color,face 옵션사용
+1~7사이의 숫자 기본3
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<font>나의 홈페이지</font>
+	<font size=7>나의 홈페이지</font>
+	<font color="red">나의 홈페이지</font>
+</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+상대적 크기 나타내기
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<font color="red" size="+2">2단계가 큰 경우</font>
+	<font size=5>이건 size 5인경우</font>
+	<font size=-1>이건 1단계가 작은 경우=></font>
+	<font size=2>이건 size 2인 경우</font>
+	<font size=-4>음수가 되면 size 1=></font>
+	<font color="blue" size="+5">size 8=></font>
+	<font size="7">size 7</font>(7이상일 떄는 size 7로)
+</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<basefont>태그
+기본글자크기 지정
+<basefont size=n>으로 선언 이후 글자는n이 기본크기
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	기본 바탕글자의 크기를 재 지정(현재는 크기가 3)<br>
+	<basefont size="5" color="blue">글자 크기가 5로 바뀜 
+		<font size="-1"> 이건 1단계가 작은 경우</font>
+		<font size="5">글자 크기가 5와 같음</font>
+</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<big>태그와<small>태그
+한문단에서 특정 글자를 주변 글자 보다 한 사이즈 크거나 작게
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body bgcolor="#ffffff">
+	<h3>문서의 특정 글자를 크게 하거나 작게 할 때 사용</h3>
+	small태그를 사용하면<small>[글자는 한 단계]</small>작아진다
+	<br><br>
+	<basefont size="5" color="blue">
+		big태그를 사용하면<big>[글자는 한 단계]</big>커진다
+
+</body>
+</html>
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+공백 문자 (&nbsp;)NextBackSPace
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body bgcolor="#ffffff">
+	<h3>공백문자를 이렇게 넣는 방법</h3>
+	컴퓨터정보과     1학년    갑순이<br><br>
+	공백문자를           아무리 넣어도 인식을 못한다.<br><br>
+	그러나 공백문자를 이렇게 넣으면
+	(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+	공백이 나타나죠><br><br>
+	즉&nbsp;&nbsp;
+		컴퓨터정보과&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		1학년&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;갑순이 
+</body>
+</html>
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<p> 태그
+문단을 구분, 앞 문단과 구분을위해 줄 바꿈 빈 줄 삽입
+옵션:(align,left,center,justify)
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<p>첫번째 문자열</p>
+	<p>두 번째 문자열</p>
+	<p align="right"> 세번 쨰 문 자 열 </p>
+</body>
+</html>
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<div>태그
+문단을 구분,앞 문단과 구분을 위해 줄만 바꾼다
+옵션:(align,left,center,justify)
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<div>첫번째 문자열</div>
+	<div>두 번째 문자열</div>
+	<div align="right"> 세번 쨰 문 자 열 </div>
+</body>
+</html>
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<pre>태그
+레이아웃을 자유롭게 표현하고자 할 때 사용
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<pre>
+		<h3>전산정보계열
+		1학년        반명:A반
+
+		학번은:2004.....
+
+		이름은:김돌이</h3>
+	</pre>
+</body>
+</html>
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+Address태그
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<center><h3>본인의 홈페이지에 오신걸 환영해</h3></center>
+	<address>
+		작성자: 이 근형<br>저에게 메일을 보내시려면
+		<a href="mailto:dabeshark0@gmail.com">dabeshark0@gmail.com
+		</a>로 보내시면 됩니다.
+	</address>
+</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<ul>태그
+<ul [type = "disc 또는 circle 또는 square"]>
+<li>목록1
+<li>목록2
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<b>내가 좋아 하는 음악</b>
+	<ul>
+		<li>아 ! 대한민국
+		<li>네박자
+		<li>아름다운 강산
+	</ul>
+	</body>
+</html>
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<ol [type="1또는A또는l"]><!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<b>내가 좋아 하는 음악</b>
+	<ol>
+		<li>아 ! 대한민국
+		<li>네박자
+		<li>아름다운 강산
+	</ol>
+	</body>
+</html>
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<menu>태그
+<menu [type="<ul> 과 <ol>에서 사용할수있는것"]>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<b>메뉴리스트</b>
+	<menu>메뉴1
+		<li>홈페이지 만들기
+		<li>이미지 삽입하기
+		<li>테이블 만들기
+	</menu>
+	<menu type = a> 메뉴2
+		<li>아!대한민국
+		<li>아름다운 강산
+		</menu>
+		<b>메뉴 리스트 끝</b>
+	</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<dir>태그 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body bgcolor="white">
+	<b>디렉토리 리스트</b>
+	<dir type = 1>Dir 메뉴 1
+		<li>홈페이지 만들기
+		<li>이미지 삽입하기
+		<li>테이블 만들기
+	</dir>		
+	</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<dl>태그
+<dl>
+   <lh>제목
+      <dt>용어
+         <dd>설명1
+</dl>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<h3>정의 리스트</h3>
+	<dl>
+		<lh><b>사랑의 서막</b><p>
+			<dt>제 1조
+				<dd>남자는 여자를 사랑한다.
+			<dt>제 2조
+				<dd>여자는 남자를 사랑한다.
+	</dl>
+	<b>정의 리스트 끝</b>
+	</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+선그리기
+<hr>태그 
+-<hr> 끝 태그가 없다.
+웹 화면에 수평선을 긋는다.
+사용법
+[
+<hr>
+<hr size="픽셀수">
+<hr width = "픽셀 수 또는 가로 쪽에 대한 비울(%)"
+	align="left 또는 right 또는 center">
+<hr color = 색명이나#000>
+<hr noshade>
+]<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<b>선 그리기</b><br><br>
+	화면 전체에 ==> <br>  <hr>
+	선두깨와 색깔을 지정 ==> <br>
+						<hr size="5" color="blue">
+	선 을 지정(창 크기와는 무관함)==> <br>
+						<hr width="100">
+	선 폭을 지정(창 크기에 무관함)==> <br>
+						<hr width="50%">
+	선의 위치를 지정 ==> <br>
+						<hr width="100" align="right">
+	선 색을 지정 ==> <br> <hr color="red">
+</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<img>태그
+웹 화면에 이미지를 삽입
+확장자는 git나 jpg
+이미지를 하나의 문자로 취급 따라서 줄바꿈 필요
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<b>이미지 삽입하기</b>
+	<hr color=red>
+	<!--그림파일은"*.gif"나"8.jpg"-->
+	<img src="smiling,gif">
+	<img src="ani054.gif" border="3" width="100" hright="150">
+	<img src="mask.jpg">
+	</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<a>태그
+웹문서를 연결
+통상 문자열에 밑줄이 나타난다.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<center><b>사이트 연결하기</b>
+		<hr color="blue">
+		<a href="http://www.naver.com">네이버사이트</a><br>
+		<a href="http://ww.daum.net">다음 사이트</a>
+		<a href="index.html"> <img src="집.jpg"></a>
+		<a href="top.html" title="최상위로"> ▲top</a>
+	</center>
+	</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<map>태그
+먼저 이미지를 map으로 사용한다 선언
+이미지형태를 지정:rect,circle,poly중
+모양의 크기와 위치를 표현:xy좌표 이용
+xy좌표는 그림프로그램 이용:photoshop이나 그림판 등
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<b>이미지 맵</b>
+	<hr>
+	<img src="집.jpg" usemap="#menu">
+	<map name="menu">
+		<area shape="rect" coords="466,149,523,208" href="main.html">
+		<area shape="circle" coords="187,49,30" href="http://www.nownuri.net">
+		<area shape="circle" coords="213,106,30" href="index.html">
+		<area shape="circle" coords="260,163,30" href="http://www.ktf.com">
+	</map>
+	</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+셀 합치기
+행과 열을 합칠 수 있다.
+행을 합치려면 rowspan,열을 합치려면 colspan
+합치고자 하는 열에서 언급
+
+1.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<b>테이블 실습</b>
+	<hr width="250">
+	<table border>
+		<tr>
+			<th rowspan="2">우리대학
+				<th>학과</th><th>학년</th>
+				<th>성명</th></tr>
+		<tr>
+			<td>전산과</td><td>1 학년</td>
+			<td>갑순이</td></tr>
+	</table>
+	</body>
+</html>
+2.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<b>테이블 실습</b>
+	<hr width="250">
+	<table border>
+		<tr>
+			<th rowspan="2">우리여대<th></th>
+
+			<tr><th>학과</th>
+				<th>전산과</th>
+			<tr>	
+				<th>학년</th>
+				<th>1 학년</th></tr>
+			<tr>
+				<td>성명</td>
+				<td>갑순이</td></tr>
+	</table>
+	</body>
+</html>
+셀의 바탕색 넣기
+중복하여 지정하면 최종 색은<td>에서 정의된 색상
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<center><b>테이블 배경색 넣기</b>
+		<hr width="250" color="pink">
+		<table border width="250" bgcolor="red">
+			<tr bgcolor="orange">
+			<th>대한민국</th><th>오스트리아</th></tr>
+		<tr height="100"><td bgcolor="yellow">서울</td>
+						 <td valign="bottom">빈</td></tr>
+	</table>
+	</body>
+</html>
+글상자 만들기태그
+<fieldset>
+-<tavle>태그로 표현 할 수 없는 부분을 보완
+<legend>
+-글상자에 제목을 붙이는 태그
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body>
+	<fieldset>
+		<legend align = conter><img src="집.jpg"></legend>
+		<p align=center>
+		<b><font size=6 color="red">MY sweet home</b>
+		</p>
+	</fieldset>
+	</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
