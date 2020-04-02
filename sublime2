@@ -1,0 +1,166 @@
+스크롤 지정
+<!DOCTYPE html>
+<html>
+<head>
+  <title>스크롤 지정</title>
+</head>
+<body topmargin="10">
+	<h3>자동 스크롤 지정</h3>
+	<hr color="red">
+	<marquee>
+		&lt;marquee&gt;를 지정하면 텍스트가 오른쪽에서 왼쪽으로 스크롤 되면서 보여줍니다.
+	</marquee><br><p>
+		<font size="4"> EXPLORER에서만 됨</font>	
+	</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+시간 간격 지정
+<!DOCTYPE html>
+<html>
+<head>
+  <title>스크롤 지정</title>
+</head>
+<body>
+	<center>
+		<h1>시간간격 지정<hr>
+		<marquee bgcolor="yellow">
+			우리대학 컴퓨터 정보과</marquee><p>
+		<marquee scrolldelay="50" bgcolor="red">
+		우리대학 컴퓨터 정보과 </marquee><p>
+		<marquee scrolldelay="200" bgcolor="blue">
+		우리대학 컴퓨터 정보과</marquee></h1>
+	</center>
+				</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+흐름 모양새 지정
+alternate=벽에닿으면 반대로 움직ㅇ는
+slide=벽에닿으면 멈춘다.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>흐름 모양새 지정</title>
+</head>
+<body>
+	<center>
+		<h3>모양새 지정<hr color="blue">
+		<marquee behavior="alternate" bgcolor="yellow">
+		우리대학</marquee><br><p>
+		<marquee behavior="slide" bgcolor="red">
+		컴퓨터정보과</marquee></h3><br><p>
+	</center>
+</body>
+</html>
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<frameset>태그
+<head>태그만 서술<body>태그를 쓰지않는다.
+<frameset>과<frame>들로 구성
+독립적으로 제어할수있는 여러개의 구역을 사용
+반드시 기본옵션으로 "cols"나"rows"하나는 써야 한다.
+1.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<frameset cols="200,*">
+	<frame>
+	<frame>
+	</frameset>
+</html>
+2.
+끝 태그를 쓰지않는다.
+해당 프레임에 나타낼 웹 문서를 서술
+프레임에 이름을 부여 추후target위취로 활용
+target지정은 <a>태그에서 선언
+noresize는 프레임의 크기를 재조정 못하게함
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<frameset cols="150,*" border=5>
+	<frame src="first.html">
+	<frame src="second.html">
+	</frameset>
+</html>
+3.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<frameset cols="200,*">
+	<frame src="search.html" name="left">
+	<frame src="http://www.daum.net" name="right" scrolling="no">
+	</frameset>
+</html>
+4.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<<body bgcolor="#OOffff">
+	<h3>검색사이트<br><br>
+		<a href="http://www.yahoo.co.kr" target="right">yahoo</a><br>
+		<a href="http://www.naver.com" target="left">naver</a></h3>
+	</body>
+</html>
+
+특수 target
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body bgcolor="#OOffff"><b>검색 사이트</b><br>
+<!--클릭하면 새로운 창이 뜨면서 사이트 홈페이지가 나타난다.-->
+<a href="http://www.naver.com" target="_blank">네이버 사이트</a><br>
+<a href="http://www.yahoo.co.kr" target="_top">야후사이트</a><br>
+<a href="http://www.daum.net" target="_parent">다음사이트</a>
+</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+내부 스타일시트
+<!DOCTYPE html>
+<html>
+<head>
+  <title>embedding 스타일 시트</title>
+<style type="text/css">
+	h2{font-style:italic; color:blue;}
+</style>
+</head>
+<body><center>
+	<h2>embedding스타일시트</h2>
+	<hr width=300 color=red>
+	<h4>전산정보계열</h4>
+</center></body>
+</html>
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+style sheet에서 주석달기
+방법
+여러 줄 주석:/*     */으로 감싼다.
+한 줄 주석 : // 을 줄 앞에 쓴다.
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>나의 홈페이지</title>
+</head>
+<body><center>
+	<h2>embedding 스타일 시트</h2>
+	<p>우리들 세상</p>
+	<h4>우리들의 세상</h4><!--<h4>태그는 무관함-->
+</center>
+</body>
+</html>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
