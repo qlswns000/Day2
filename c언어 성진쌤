@@ -1,0 +1,155 @@
+랜덤 숫자 게임
+#include <stdio.h>
+
+int main(void)
+{
+    srand(time(NULL));
+    int answer=(rand()%99)+1;
+    int guess;
+    int tries=0;
+    do
+    {
+        printf("정답을 추측하여 보시요");
+        scanf("%d",&guess);
+        tries++;
+        if(guess>answer)
+            printf("↓");
+        if(guess<answer)
+            printf("↑");
+    }while (guess != answer);
+    printf("축하합니다. 정답은 %d, 총 시도횟수=%d",answer,tries);
+    return 0;
+}
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+배열 정렬
+#include <stdio.h>
+
+int main(void)
+{
+    int score[]={9,17,11,1,3,5,19,14,4,16};
+    int i,j,tmp;
+    int a = sizeof(score)/sizeof(score[0]);
+    for(i=0;i<(a-1);i++){
+        for(j=i;j<a;j++){
+        
+            if(score[i]>score[j]){
+               tmp=score[i];
+               score[i]=score[j];
+               score[j]=tmp;
+            }
+        }
+    }
+    for(i=0;i<a;i++){
+        printf("%5d",score[i]);
+    }printf("\n");
+}
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+#include <stdio.h>
+
+int main(void)
+{
+    int i,j;
+    int arr[5][5];
+    for(i=0;i<5;i++){
+        for(j=0;j<5;j++){
+            if(i%2==0){
+                int a =5-i-j;
+                if(a>0)
+                    arr[i][j]=a;
+                else
+                    arr[i][j]=0;
+            }else{
+                if(j<(5-i))
+                    arr[i][j]=j+1;
+                else
+                    arr[i][j]=0;
+                }
+                printf("%3d",arr[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+과목 평균
+#include <stdio.h>
+
+int main(void)
+{
+    int i,j;
+    int arr[5][3]={70,50,80,40,30,90,80,90,90,30,10,10,100,70,80};
+    printf("=수학  물리  화학\n");
+    int sum1=0, sum2=0, sum3=0;
+    for(i=0;i<5;i++){
+        int sum0=0;
+        for(j=0;j<3;j++){
+            if(j==0)
+                sum1= sum1+arr[i][j];
+            else if(j==1)
+                sum2= sum2+arr[i][j];
+            else
+                sum3= sum3+arr[i][j];
+            sum0 += arr[i][j];
+            printf("%5d",arr[i][j]);
+        }
+        printf("%5d",sum0/3);
+        printf("\n");
+    }printf("%5d%5d%5d%5d",sum1/5,sum2/5,sum3/5,(sum1+sum2+sum3)/15);
+}
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+함수
+#include <stdio.h>
+
+int add2(int a,int b);
+
+int findMin2(int x,int y);
+int main(void)
+{
+    int a = 3, b = 5;
+    int sum = add2(a,b);
+    printf("합:%d\n",sum);
+    printf("두 수중에 작은 수는 %d",findMin2(a,b));
+    return 0;
+}
+
+int add2(int a, int b)
+{
+    int sum = a+b;
+
+    return (sum);
+}
+
+int findMin2(int x,int y)
+{
+    int min = x < y ? x:y;
+
+    return (min);
+}
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+제곱 구하기
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+    int i;
+
+    printf("  i   i제곱   i세제곱    제곱근(sqrt)\n");
+    printf("-----------------------------------\n");
+    for(i=3;i<100;i++)
+        printf("%3d %7.lf %9.lf %9.1f\n",i,pow(i,2),pow(i,3),sqrt(i));
+            printf("\n");
+
+    printf("exp(1.0) == %5.2f,",exp(1.0));
+    printf("pow(2,72, 1.0) == %5.2f,",pow(2.72,1.0));
+    printf("sqrt(49) == %5,2f\n",sqrt(49));
+    printf("abs(-10) == %3d,",abs(-10));
+    printf("ceil(7.1) == %5.2f,",ceil(7.1));
+    printf("floor(6.9) == %5.2f\n",floor(6.9));
+
+    return 0;
+}
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
